@@ -1,0 +1,55 @@
+@model SzyfyBezpieczenstwoSysKomp.Models.VigenereModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Szyfr Vigenère'a";
+}
+
+<h2>Szyfr Vigenère'a</h2>
+
+<div class="container">
+    <div class="content-box">
+        <form method="post">
+            <div class="form-group mb-3">
+                <label for="Message" class="fw-bold">Tekst do szyfrowania:</label>
+                <textarea id="Message" asp-for="Message" class="form-control" required></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label for="Key" class="fw-bold">Klucz szyfru:</label>
+                <input type="text" id="Key" asp-for="Key" class="form-control" required />
+                <span asp-validation-for="Key" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="fw-bold">Wybierz operację:</label><br />
+                <input type="radio" asp-for="IsEncrypting" value="true" checked /> Szyfruj
+                <input type="radio" asp-for="IsEncrypting" value="false" /> Deszyfruj
+            </div>
+            <button type="submit" class="btn btn-custom">Wykonaj</button>
+        </form>
+
+        @if (ViewBag.Result != null)
+        {
+        <div class="mt-4">
+            <h4 class="fw-bold text-success">Wynik operacji:</h4>
+            <p class="text-success">@ViewBag.Result</p>
+        </div>
+        }
+    </div>
+
+    <div class="content-box">
+        <h3>Raport</h3>
+        <p>Szyfr Vigenère'a to szyfr podstawieniowy. 
+            Każda litera tekstu wprowadzonego przez użytkownika jest zamieniana na podstawie przesunięcia 
+            wskazywanego przez literę klucza. W programie został uwzględniony polski alfabet.
+            Jest także dodana metoda RepeatKey która pozwala na cykliczne powtarzanie klucza tak, aby 
+            tekst jawny mógł być dowolnie długi, dzięki czemu kod jest elastyczny.
+            <br/></p>
+        <p>
+            Metody Encrypt i Decrypt zawierają całą logikę.
+            W metodzie szyfrującej znajdowany jest indeks dla każdej litery jawnego tekstu,
+            a następnie zwiększany o wartość klucza podanego przez użytkownika. Indeks ostatecznie 
+            obliczany jest poprzez użycie modulo 35, dzięki czemu pozostajemy w zakresie polskiego alfabetu.
+            Metoda deszyfrowania działa odwrotnie - od indeksu litery jawnego tekstu jest odejmowany klucz.</p>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,15 +10,70 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+  background-color: #add8e6; /* Baby Blue */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px; /* Aby stopka nie nachodziła na treść */
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 0; /* Kontenery bliżej góry */
+  flex: 1; /* Rozciąganie, aby zajmowało całą przestrzeń */
+}
+
+.content-box {
+  background-color: #ffffff; /* Tło dla ramek */
+  border: 2px solid #ff1493; /* Deep Pink */
+  border-radius: 8px; /* Zaokrąglone rogi */
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Lekki cień */
+  color: #333333; /* Kolor tekstu */
+  line-height: 1.8;
+  width: 45%; /* Szerokość ramek */
+  height: 500px; /* Wysokość ramek */
+  overflow-y: auto; /* Przewijanie w razie potrzeby */
+  text-align: justify; /* Wyrównanie tekstu */
+}
+
+h2, h3 {
+  color: #ff1493; /* Deep Pink */
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-custom {
+  background-color: #ff1493; /* Deep Pink */
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #d11375; /* Ciemniejszy róż */
+  color: #ffffff;
+}
+
+.text-success {
+  color: #ff1493 !important; /* Wyniki w Deep Pink */
+}
+
+.report p {
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+  font-size: 12px;
+  background-color: #ffffff;
+  border-top: 1px solid #ff1493; /* Linia odzielająca stopkę */
 }

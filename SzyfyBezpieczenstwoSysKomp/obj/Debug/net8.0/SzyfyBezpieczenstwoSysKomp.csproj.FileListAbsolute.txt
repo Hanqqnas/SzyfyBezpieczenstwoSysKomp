@@ -28,3 +28,4 @@ C:\Users\48531\RiderProjects\SzyfyBezpieczenstwoSysKomp\SzyfyBezpieczenstwoSysKo
 C:\Users\48531\RiderProjects\SzyfyBezpieczenstwoSysKomp\SzyfyBezpieczenstwoSysKomp\obj\Debug\net8.0\SzyfyBezpieczenstwoSysKomp.pdb
 C:\Users\48531\RiderProjects\SzyfyBezpieczenstwoSysKomp\SzyfyBezpieczenstwoSysKomp\obj\Debug\net8.0\SzyfyBezpieczenstwoSysKomp.genruntimeconfig.cache
 C:\Users\48531\RiderProjects\SzyfyBezpieczenstwoSysKomp\SzyfyBezpieczenstwoSysKomp\obj\Debug\net8.0\ref\SzyfyBezpieczenstwoSysKomp.dll
+C:\Users\48531\RiderProjects\SzyfyBezpieczenstwoSysKomp\SzyfyBezpieczenstwoSysKomp\obj\Debug\net8.0\SzyfyBezpieczenstwoSysKomp.sourcelink.json

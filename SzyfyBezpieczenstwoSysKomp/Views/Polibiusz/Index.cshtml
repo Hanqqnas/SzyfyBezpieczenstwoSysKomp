@@ -1,0 +1,49 @@
+@model SzyfyBezpieczenstwoSysKomp.Models.Polibiusz.PolibiuszResultModel
+
+<h2>Szyfr Polibiusza</h2>
+
+<div class="container">
+    <div class="content-box">
+        <form method="post" action="/Polibiusz/Encrypt">
+            <label for="inputText"><strong>Tekst do zaszyfrowania:</strong></label>
+            <input type="text" id="inputText" name="inputText" class="form-control" required />
+            <button type="submit" class="btn btn-custom">Szyfruj</button>
+        </form>
+
+        @if (Model != null)
+        {
+            <hr />
+            <h3>Wynik szyfrowania</h3>
+            <p><strong>Tablica szyfrowania:</strong></p>
+            <table border="1" cellpadding="5" cellspacing="0">
+                @for (int i = 0; i < 5; i++) {
+                    <tr>
+                        @for (int j = 0; j < 7; j++) {
+                            <td>@Model.Grid[i, j]</td>
+                        }
+                    </tr>
+                }
+            </table>
+            <p class="text-success"></p>
+
+
+            <p class="text-success"><strong>Tekst zaszyfrowany:</strong> @Model.EncryptedText</p>
+            <p class="text-success"><strong>Wynik końcowy:</strong> y = @Model.Result</p>
+        }
+    </div>
+    
+    <div class="content-box">
+        <h3>Raport z szyfru Polibiusza</h3>
+        <p>
+            Szyfr Polibiusza to metoda wykorzystująca siatkę liter i ich współrzędne.
+            W tym programie siatka jest generowana losowo, za każdym razem inaczej.
+            Każda litera tekstu wprowadzanego przez użytkownika jest konwertowana na liczby
+            na podstawie wygenerowanej siatki. 
+            <br/></p>
+        <p>
+            W kolejnym kroku obliczamy funkcję kwadratową y = a*x^2 + b. 
+            Przypisujemy dla x liczbę, która jest wynikiem pierwszego kroku. 
+            Liczby a i b są generowane losowo z przedziału od 1 do 10.
+        </p>
+    </div>
+</div>
