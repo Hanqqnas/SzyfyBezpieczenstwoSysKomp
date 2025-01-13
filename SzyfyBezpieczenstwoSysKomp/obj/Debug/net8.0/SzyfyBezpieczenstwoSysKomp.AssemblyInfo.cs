@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SzyfyBezpieczenstwoSysKomp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a0848e38b1a33c8311b8a9126f6004fa1982604")]
 [assembly: System.Reflection.AssemblyProductAttribute("SzyfyBezpieczenstwoSysKomp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SzyfyBezpieczenstwoSysKomp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
